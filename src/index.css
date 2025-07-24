@@ -19,14 +19,26 @@ nav {
   justify-content: center;
   background: #e2dfd2;
   padding: 10px 0;
+  align-items: center;
 }
 
-nav a {
+nav button {
   color: #395315;
   text-decoration: none;
   font-weight: 600;
   margin: 0 15px;
   transition: color 0.2s;
+  border: none;
+  background-color: #e2dfd2;
+  border-radius: 10px;
+  padding: 10px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+nav button:hover{
+  cursor: pointer;
+  background-color: #95c47e;
+  color: #fff;
 }
 
 nav a:hover {
@@ -47,6 +59,7 @@ nav a:hover {
   flex-wrap: wrap;
   justify-content: center;
   padding: 32px 0;
+  margin-top: 30px;
 }
 
 .gallery-img {
@@ -61,6 +74,6 @@ nav a:hover {
 }
 
 .gallery-img:hover {
-  transform: scale(1.045);
+  transform: scale(1.08);
   box-shadow: 0 4px 18px rgba(149,196,126,0.21);
 }

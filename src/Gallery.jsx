@@ -11,6 +11,10 @@ const appleImages = [
   { src: '/images/2.jpg', alt: 'Apple 2' },
   { src: '/images/1.jpg', alt: 'Apple 1' },
   { src: '/images/3.jpg', alt: 'Apple 3' },
+  { src: '/images/3.jpg', alt: 'Apple 3' },
+  { src: '/images/2.jpg', alt: 'Apple 2' },
+  { src: '/images/1.jpg', alt: 'Apple 1' },
+  { src: '/images/3.jpg', alt: 'Apple 3' },
 ];
 
 function Gallery() {
