@@ -26,6 +26,7 @@ function TextBox() {
         </ul>
       </article>
       <article>
+        <h2>Security Headers</h2>
         <p>
           Learn more: <a target="_blank" href="https://securityheaders.com/" rel="noopener noreferrer">Scan your site at securityheaders.com</a>
         </p>
