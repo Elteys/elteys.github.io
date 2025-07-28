@@ -4,8 +4,7 @@ function TextBox() {
       <article>
         <h2>About Apples</h2>
         <p>
-          Apples are among the most popular fruits in the world—they are tasty, healthy, and incredibly versatile.
-          Discover my favorite varieties and find out why you should consider eating them!
+          Honestly, I had no idea what to call my website, so I just picked the very first thing that popped into my head: apples. They are tasty, healthy, and incredibly versatile.
         </p>
       </article>
       <article>
