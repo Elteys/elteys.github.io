@@ -37,7 +37,7 @@ function App() {
 
   // Pełne teksty do animacji nagłówka
   const fullJobTitle = 'Junior Software Developer.';
-  const alexName = 'ALEX';
+  const alexName = 'ALEXXXX';
   const lysakowskiName = 'ŁYSAKOWSKI';
 
   // Efekt pisania kodu z bardziej nieregularnymi przerwami
