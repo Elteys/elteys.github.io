@@ -139,7 +139,7 @@ function App() {
       
       {/* --- NAWIGACJA --- */}
       <nav className="flex justify-between items-center px-6 md:px-10 py-6">
-        <h1 className="text-2xl md:text-3xl font-extrabold text-teal-400">ALEX ŁYSAKOWSKI</h1>
+        <h1 className="text-2xl md:text-3xl font-extrabold text-teal-400">A.Ł.</h1>
         
         <ul className="hidden md:flex space-x-8 text-sm uppercase tracking-wide">
           {navItems.map((item) => (
