@@ -11,12 +11,10 @@ import {
 const skillsData = [
   // Twoje dane umiejętności
   { name: 'JavaScript', icon: <SiJavascript className="text-yellow-400" /> },
-  { name: 'C++', icon: <SiCplusplus className="text-blue-600" /> },
   { name: 'HTML5', icon: <FaHtml5 className="text-orange-500" /> },
   { name: 'CSS3', icon: <FaCss3Alt className="text-blue-500" /> },
   { name: 'SQL', icon: <FaDatabase className="text-indigo-400" /> },
   { name: 'React', icon: <FaReact className="text-cyan-400" /> },
-  { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-teal-400" /> },
   { name: 'Node.js', icon: <FaNodeJs className="text-green-500" /> },
   { name: 'PHP', icon: <FaPhp className="text-indigo-500" /> },
   { name: 'MySQL', icon: <SiMysql className="text-blue-500" /> },

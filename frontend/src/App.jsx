@@ -44,24 +44,24 @@ function App() {
   useEffect(() => {
     const emptyPlaceholder = fullCodeString.replace(/[^\n]/g, ' ');
     let i = 0;
-    
+
     // Zmieniono na rekurencyjny setTimeout, aby wprowadzić losowe opóźnienia
     const typeCharacter = () => {
       if (i >= fullCodeString.length) {
         return;
       }
-      
+
       const typedPart = fullCodeString.substring(0, i + 1);
       const remainingPart = emptyPlaceholder.substring(i + 1);
       setTypedCode(typedPart + remainingPart);
-      
+
       i++;
-      
+
       // Losowe opóźnienie w milisekundach (np. od 20 do 80 ms)
-      const minDelay = 20; 
+      const minDelay = 20;
       const maxDelay = 80;
       const delay = Math.floor(Math.random() * (maxDelay - minDelay + 1)) + minDelay;
-      
+
       setTimeout(typeCharacter, delay);
     };
 
@@ -73,7 +73,7 @@ function App() {
   // Efekt pojawiania się nagłówka i pisania stanowiska
   useEffect(() => {
     let jobTitleInterval;
-    
+
     // Uruchamia animację płynnego pojawiania się imienia i nazwiska
     const headerVisibleTimeout = setTimeout(() => {
       setIsHeaderVisible(true);
@@ -136,17 +136,17 @@ function App() {
           }
         `}
       </style>
-      
+
       {/* --- NAWIGACJA --- */}
       <nav className="flex justify-between items-center px-6 md:px-10 py-6">
         <h1 className="text-2xl md:text-3xl font-extrabold text-teal-400">A.Ł.</h1>
-        
+
         <ul className="hidden md:flex space-x-8 text-sm uppercase tracking-wide">
           {navItems.map((item) => (
             <li key={item}>
-              <a 
-                href={`#${item.toLowerCase()}`} 
-                onClick={(e) => handleScroll(e, item)} 
+              <a
+                href={`#${item.toLowerCase()}`}
+                onClick={(e) => handleScroll(e, item)}
                 className="hover:text-pink-500 cursor-pointer transition-colors"
               >
                 {item}
@@ -154,7 +154,7 @@ function App() {
             </li>
           ))}
         </ul>
-        
+
         <div className="md:hidden">
           <button onClick={() => setIsMenuOpen(true)} aria-label="Open menu">
             <FaBars className="text-2xl text-white" />
@@ -172,9 +172,9 @@ function App() {
         <ul className="flex flex-col items-center justify-center h-full -mt-12 space-y-8">
           {navItems.map((item) => (
             <li key={item}>
-              <a 
-                href={`#${item.toLowerCase()}`} 
-                onClick={(e) => handleScroll(e, item)} 
+              <a
+                href={`#${item.toLowerCase()}`}
+                onClick={(e) => handleScroll(e, item)}
                 className="text-2xl uppercase tracking-widest hover:text-pink-500 transition-colors"
               >
                 {item}
@@ -191,13 +191,13 @@ function App() {
           <section className="flex-1 flex flex-col justify-center max-w-xl">
             <h2 className="text-4xl md:text-6xl font-extrabold leading-tight overflow-hidden flex flex-col space-y-4">
               <div className="flex flex-col">
-                <span 
+                <span
                   className={`text-pink-500 transition-all duration-700 ease-out transform block ${isHeaderVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}
                 >
                   {alexName}
                 </span>
-                <span 
-                  className={`text-pink-500 transition-all duration-700 ease-out transform block ${isHeaderVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`} 
+                <span
+                  className={`text-pink-500 transition-all duration-700 ease-out transform block ${isHeaderVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}
                   style={{ transitionDelay: '0.2s' }}
                 >
                   {lysakowskiName}
@@ -216,19 +216,23 @@ function App() {
               <a href="https://www.facebook.com/share/16rwRj619U/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-pink-400 transition-colors">
                 <FaFacebook />
               </a>
-              <a href="https://www.instagram.com/liv3d3xipv?igsh=ZzU1OWEwdGk4dGQ1" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-pink-400 transition-colors">
+              {/* <a href="https://www.instagram.com/liv3d3xipv?igsh=ZzU1OWEwdGk4dGQ1" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-pink-400 transition-colors">
                 <FaInstagram />
-              </a>
+              </a> */}
               <a href="https://discord.gg/jssX3kkG" target="_blank" rel="noopener noreferrer" aria-label="Discord" className="hover:text-pink-400 transition-colors">
                 <FaDiscord />
               </a>
             </div>
             <div className="flex space-x-6 mt-10">
-              {/* Zmiana: Przycisk Contact Me otwiera klienta poczty */}
-              <a href="mailto:x.lysakowski@gmail.com" className="border border-pink-500 px-6 py-3 rounded-full text-sm uppercase tracking-wide hover:bg-pink-500 hover:text-white transition">
+              {/* DODAĆ FORMULARZ KONTAKTOWY */}
+              <a href="mailto:x.lysakowski@gmail.com" className="border border-pink-500 px-6 py-3 rounded-full text-sm uppercase tracking-wide hover:bg-pink-500 hover:text-white transition" onClick={(e) => {
+                alert(
+                  "The contact system is currently under construction.\n\n" +
+                  "If you need to reach me, please contact me via Facebook or by email: x.lysakowski@gmail.com\n\n"
+                );
+              }}>
                 Contact Me
               </a>
-              {/* Zmiana: Przycisk Get Resume przewija w dół strony */}
               <button onClick={handleScrollDown} className="bg-gradient-to-r from-pink-500 to-purple-600 px-6 py-3 rounded-full text-sm uppercase tracking-wide hover:opacity-90 transition">
                 Get Resume ↓
               </button>
@@ -267,7 +271,7 @@ function App() {
           <ScrollAnimationWrapper>
             <About />
           </ScrollAnimationWrapper>
-          
+
           <ScrollAnimationWrapper>
             <Experience />
           </ScrollAnimationWrapper>
@@ -289,7 +293,7 @@ function App() {
           </ScrollAnimationWrapper>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );

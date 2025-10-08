@@ -5,13 +5,14 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import retail24Image from '../assets/Projects/retail24.png';
 import boombat from '../assets/Projects/boombat.png';
 import trapify from '../assets/Projects/trapify.gif';
+import unia from '../assets/Projects/UIP.png';
 
 // Uzupełnione opisy projektów
 const projectsData = [
   {
     title: "Retail24 - E-commerce Platform",
     description: "Design of the website and the entire sales management logic via the IdoSell sales platform; configuration, styling, and adaptation with other sales portals.",
-    image: retail24Image, 
+    image: retail24Image,
     tags: ["HTML", "CSS", "IdoSell engine"],
     liveUrl: "https://retail24.pl",
     githubUrl: "none"
@@ -20,7 +21,7 @@ const projectsData = [
     title: "BoomBat - group internship project",
     description: "A group project focusing on the React and Node.js environment, utilizing numerous APIs to create a small site for random games without real money, earned through mini-games.",
     image: boombat,
-    tags: ["React", "Node.js", "MongoDB", "Express", "Vite","Tailwind CSS"],
+    tags: ["React", "Node.js", "MongoDB", "Express", "Vite", "Tailwind CSS"],
     liveUrl: "none",
     githubUrl: "https://github.com/BoomBat-esmovia"
   },
@@ -28,10 +29,19 @@ const projectsData = [
     title: "Trapify - find your own trap",
     description: "A larger school project written in pure JS in the Node.js environment, focusing on using a NoSQL database - MongoDB. The site was intended to allow users to search for events and create their own listings.",
     image: trapify,
-    tags: [ "Node.js", "MongoDB", "JavaScript", "CSS", "HTML5"],
+    tags: ["Node.js", "MongoDB", "JavaScript", "CSS", "HTML5"],
     liveUrl: "none",
     githubUrl: "https://github.com/Elteys/Trapify"
+  },
+  {
+    title: "Stowarzyszenie Unia i Przyjaciele - registration platform",
+    description: "A web platform built for a Polish non-profit organization to manage event registrations. The system allows participants to register with or without a companion, choose meal preferences, and automatically receive confirmation emails via PHPMailer and SMTP (Hostinger). The backend is written in pure PHP and MySQL with secure validation and database handling, while the frontend is made with React. I implemented email automation, backend validation logic, and database integration.",
+    image: unia,
+    tags: ["React", "PHP", "MySQL", "PHPMailer", "Hostinger", "Validation"],
+    liveUrl: "https://stowarzyszenieuniaiprzyjaciele.pl",
+    githubUrl: "none"
   }
+
 ];
 
 function Projects() {
@@ -47,8 +57,8 @@ function Projects() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projectsData.map((project, index) => (
           <div key={index} className="bg-[#0b0c1a]/60 rounded-lg overflow-hidden border border-gray-800 transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
-            <img src={project.image} alt={project.title} className="w-full h-48 object-contain bg-black/20"/>
-            
+            <img src={project.image} alt={project.title} className="w-full h-48 object-contain bg-black/20" />
+
             <div className="p-6 flex flex-col flex-grow">
               <div>
                 <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
@@ -59,18 +69,18 @@ function Projects() {
                   ))}
                 </div>
               </div>
-              
+
               <div className="mt-auto pt-4">
                 <div className="flex items-center space-x-4">
                   {project.liveUrl !== "none" && (
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:text-pink-300 transition-colors flex items-center">
-                      <FaExternalLinkAlt className="mr-2"/> URL
+                      <FaExternalLinkAlt className="mr-2" /> URL
                     </a>
                   )}
-                  
+
                   {project.githubUrl !== "none" && (
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:text-pink-300 transition-colors flex items-center">
-                      <FaGithub className="mr-2"/> View Code
+                      <FaGithub className="mr-2" /> View Code
                     </a>
                   )}
                 </div>
