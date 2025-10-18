@@ -18,8 +18,8 @@ const skillsData = [
   { name: 'Linux', icon: <FaLinux className="text-accent" /> },
   { name: 'Kali Linux', icon: <SiKalilinux className="text-accent" /> },
   { name: 'Windows Server', icon: <FaWindows className="text-accent" /> },
-  { name: 'Linux Server', icon: <FaServer className="text-text-secondary" /> },
-  { name: 'GitHub', icon: <FaGithub className="text-text-secondary" /> },
+  { name: 'Linux Server', icon: <FaServer className="text-accent" /> },
+  { name: 'GitHub', icon: <FaGithub className="text-accent" /> },
 ];
 
 function Skills() {

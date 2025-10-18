@@ -27,6 +27,7 @@ body {
       #4c1d95 100%
     );
 }
+
 /* 👇 DELIKATNIE PORUSZAJĄCA SIĘ SIATKA */
 .animated-gradient-bg::before {
   content: '';
@@ -43,7 +44,6 @@ body {
   animation: subtle-grid-move 5s linear infinite;
 }
 
-/* 👇 ANIMACJA DO LEWEGO DOLNEGO ROGU */
 @keyframes subtle-grid-move {
   0% {
     background-position: 0 0;
