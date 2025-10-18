@@ -1,8 +1,7 @@
 // src/components/Certificates.jsx
 import React from 'react';
-import { FaCertificate, FaAward } from 'react-icons/fa'; // Dodano ikonę FaAward
+import { FaCertificate, FaAward } from 'react-icons/fa'; // ikonki
 
-// Uzupełniona lista certyfikatów
 const certificatesData = [
   {
     icon: <FaAward />,
@@ -38,22 +37,27 @@ function Certificates() {
   return (
     <section id="certificates" className="py-20">
       <div className="mb-12">
-        <h2 className="text-4xl font-extrabold text-white mb-4 uppercase tracking-wide">
+        <h2 className="text-4xl font-extrabold text-brand-primary mb-4 uppercase tracking-wide">
           Licenses & Certifications
         </h2>
-        <div className="h-1 w-24 bg-gradient-to-r from-pink-500 to-teal-400 rounded-full"></div>
+        <div className="h-1 w-24 bg-gradient-to-r from-accent to-accent-hover rounded-full"></div>
       </div>
 
       <div className="space-y-8">
         {certificatesData.map((cert, index) => (
-          <div key={index} className="bg-[#0b0c1a]/60 p-6 rounded-lg border border-gray-700 hover:border-teal-400 transition-colors duration-300 flex items-start">
-            <div className="text-3xl text-teal-400 mr-5 pt-1">
+          <div
+            key={index}
+            className="bg-bg-secondary/60 p-6 rounded-lg border border-ui-border hover:border-accent transition-colors duration-300 flex items-start"
+          >
+            <div className="text-3xl text-accent mr-5 pt-1">
               {cert.icon}
             </div>
             <div>
-              <h3 className="text-xl font-bold text-white">{cert.title}</h3>
-              <p className="text-md text-pink-400 mb-2">{cert.issuer} · Issued {cert.year}</p>
-              <p className="text-gray-300 leading-relaxed text-sm">
+              <h3 className="text-xl font-bold text-text-primary">{cert.title}</h3>
+              <p className="text-md text-accent mb-2">
+                {cert.issuer} · Issued {cert.year}
+              </p>
+              <p className="text-text-secondary leading-relaxed text-sm">
                 {cert.description}
               </p>
             </div>

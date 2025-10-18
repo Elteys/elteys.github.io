@@ -29,31 +29,31 @@ const experienceData = [
 function Experience() {
   return (
     <section id="experience" className="py-16 md:py-20">
+      {/* Nagłówek */}
       <div className="mb-12 text-center md:text-left">
-        <h2 className="text-4xl font-extrabold text-white mb-4 uppercase tracking-wide">
+        <h2 className="text-4xl font-extrabold text-brand-primary mb-4 uppercase tracking-wide">
           My Experience
         </h2>
-        <div className="h-1 w-24 bg-gradient-to-r from-pink-500 to-teal-400 rounded-full mx-auto md:mx-0"></div>
+        <div className="h-1 w-24 bg-gradient-to-r from-accent to-accent-hover rounded-full mx-auto md:mx-0"></div>
       </div>
 
       <div className="relative">
         {/* Pionowa linia osi czasu */}
-        <div className="absolute left-4 md:left-5 top-0 h-full w-0.5 bg-gray-700"></div>
+        <div className="absolute left-4 md:left-5 top-0 h-full w-0.5 bg-ui-border"></div>
 
         {experienceData.map((item, index) => (
-          // Zmniejszone wcięcie na mobilkach
           <div key={index} className="relative pl-12 md:pl-16 mb-12">
-            {/* Responsywna kropka z ikoną */}
-            <div className="absolute left-0 md:left-0 top-1 w-10 h-10 md:w-12 md:h-12 bg-[#1a1641] rounded-full flex items-center justify-center border-2 border-teal-400">
-              <span className="text-teal-400 text-xl md:text-2xl">{item.icon}</span>
+            {/* Kropka z ikoną */}
+            <div className="absolute left-0 md:left-0 top-1 w-10 h-10 md:w-12 md:h-12 bg-bg-secondary rounded-full flex items-center justify-center border-2 border-accent">
+              <span className="text-accent text-xl md:text-2xl">{item.icon}</span>
             </div>
 
             {/* Content */}
-            <div className="bg-[#0b0c1a]/60 p-6 rounded-lg ml-2 md:ml-4">
-              <p className="text-sm text-pink-400 mb-2">{item.date}</p>
-              <h3 className="text-xl md:text-2xl font-bold text-white">{item.title}</h3>
-              <p className="text-md text-gray-400 mb-3">{item.company}</p>
-              <p className="text-gray-300 leading-relaxed">{item.description}</p>
+            <div className="bg-bg-secondary/60 p-6 rounded-lg ml-2 md:ml-4">
+              <p className="text-sm text-accent mb-2">{item.date}</p>
+              <h3 className="text-xl md:text-2xl font-bold text-text-primary">{item.title}</h3>
+              <p className="text-md text-text-secondary mb-3">{item.company}</p>
+              <p className="text-text-secondary leading-relaxed">{item.description}</p>
             </div>
           </div>
         ))}

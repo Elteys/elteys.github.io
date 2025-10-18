@@ -2,7 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-/* dodatkowe style, np. dla brand-color */
+/* dodatkowe style */
 body {
-  @apply bg-brand-dark text-brand-text font-sans;
+  @apply bg-bg-primary text-text-primary font-sans;
+}
+
+.animated-gradient-bg {
+  background-color: #0a0a0f;
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-gradient-bg {
+  background: 
+    /* Ciemne nakładki na rogach */
+    radial-gradient(ellipse at bottom right, rgba(0, 0, 0, 0.4) 0%, transparent 70%),
+    radial-gradient(ellipse at top left, rgba(0, 0, 0, 0.3) 0%, transparent 70%),
+    /* Twój główny gradient */
+    linear-gradient(
+      135deg,
+      #0a0a0f 0%,
+      #1a0a2a 40%,
+      #2d1b69 80%,
+      #4c1d95 100%
+    );
+}
+/* 👇 DELIKATNIE PORUSZAJĄCA SIĘ SIATKA */
+.animated-gradient-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(139, 92, 246, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.15) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 0;
+  animation: subtle-grid-move 5s linear infinite;
+}
+
+/* 👇 ANIMACJA DO LEWEGO DOLNEGO ROGU */
+@keyframes subtle-grid-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100px -100px;
+  }
+}
+
+/* Reszta animacji */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.typing-cursor {
+  animation: blink 1s step-end infinite;
+  font-size: 0.7em;
 }

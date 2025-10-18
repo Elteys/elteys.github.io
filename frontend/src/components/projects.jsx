@@ -7,7 +7,6 @@ import boombat from '../assets/Projects/boombat.png';
 import trapify from '../assets/Projects/trapify.gif';
 import unia from '../assets/Projects/UIP.png';
 
-// Uzupełnione opisy projektów
 const projectsData = [
   {
     title: "Retail24 - E-commerce Platform",
@@ -41,31 +40,31 @@ const projectsData = [
     liveUrl: "https://stowarzyszenieuniaiprzyjaciele.pl",
     githubUrl: "none"
   }
-
 ];
 
 function Projects() {
   return (
     <section id="projects" className="py-20">
+      {/* Nagłówek */}
       <div className="mb-12">
-        <h2 className="text-4xl font-extrabold text-white mb-4 uppercase tracking-wide">
+        <h2 className="text-4xl font-extrabold text-brand-primary mb-4 uppercase tracking-wide">
           Featured Projects
         </h2>
-        <div className="h-1 w-24 bg-gradient-to-r from-pink-500 to-teal-400 rounded-full"></div>
+        <div className="h-1 w-24 bg-gradient-to-r from-accent to-accent-hover rounded-full"></div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projectsData.map((project, index) => (
-          <div key={index} className="bg-[#0b0c1a]/60 rounded-lg overflow-hidden border border-gray-800 transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
-            <img src={project.image} alt={project.title} className="w-full h-48 object-contain bg-black/20" />
+          <div key={index} className="bg-bg-secondary/60 rounded-lg overflow-hidden border border-ui-border transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+            <img src={project.image} alt={project.title} className="w-full h-48 object-contain bg-bg-secondary/20" />
 
             <div className="p-6 flex flex-col flex-grow">
               <div>
-                <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                <p className="text-sm text-gray-400 mb-4 h-24 overflow-y-auto">{project.description}</p>
+                <h3 className="text-xl font-bold text-text-primary mb-2">{project.title}</h3>
+                <p className="text-sm text-text-secondary mb-4 h-24 overflow-y-auto">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map(tag => (
-                    <span key={tag} className="text-xs bg-teal-500/20 text-teal-300 px-2 py-1 rounded-full">{tag}</span>
+                    <span key={tag} className="text-xs bg-accent/20 text-accent px-2 py-1 rounded-full">{tag}</span>
                   ))}
                 </div>
               </div>
@@ -73,13 +72,13 @@ function Projects() {
               <div className="mt-auto pt-4">
                 <div className="flex items-center space-x-4">
                   {project.liveUrl !== "none" && (
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:text-pink-300 transition-colors flex items-center">
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80 transition-colors flex items-center">
                       <FaExternalLinkAlt className="mr-2" /> URL
                     </a>
                   )}
 
                   {project.githubUrl !== "none" && (
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:text-pink-300 transition-colors flex items-center">
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80 transition-colors flex items-center">
                       <FaGithub className="mr-2" /> View Code
                     </a>
                   )}

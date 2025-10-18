@@ -4,20 +4,19 @@ import profilePic from '../assets/alex.jpg';
 
 function About() {
   return (
-    // Zmniejszone marginesy na mobilce
     <section id="about" className="py-16 md:py-20">
-      {/* Nagłówek wyśrodkowany na mobilce, do lewej na desktopie */}
+      {/* Nagłówek */}
       <div className="mb-12 text-center md:text-left">
-        <h2 className="text-4xl font-extrabold text-white mb-4 uppercase tracking-wide">
+        <h2 className="text-4xl font-extrabold text-brand-primary mb-4 uppercase tracking-wide">
           About Me
         </h2>
-        <div className="h-1 w-24 bg-gradient-to-r from-pink-500 to-teal-400 rounded-full mx-auto md:mx-0"></div>
+        <div className="h-1 w-24 bg-gradient-to-r from-accent to-accent-hover rounded-full mx-auto md:mx-0"></div>
       </div>
 
-      {/* Kontener flex: kolumna na mobilce, wiersz na desktopie */}
+      {/* Flex kontener */}
       <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
         {/* Kolumna z tekstem */}
-        <div className="flex-1 max-w-3xl text-lg text-gray-300 leading-relaxed text-center md:text-left space-y-6">
+        <div className="flex-1 max-w-3xl text-lg text-text-secondary leading-relaxed text-center md:text-left space-y-6">
           <p>
             I am planning my future in the IT industry, although I am also open to other opportunities. I would like to develop in a
             technical profession that combines design with practical implementation – I want my ideas to become reality.
@@ -35,11 +34,10 @@ function About() {
 
         {/* Kolumna ze zdjęciem */}
         <div className="flex-shrink-0">
-          {/* Responsywny rozmiar i usunięty margines `ml-24` */}
           <img
             src={profilePic}
             alt="Alex Łysakowski - portret"
-            className="w-64 h-64 md:w-[22rem] md:h-[22rem] rounded-full object-cover border-4 border-pink-500 shadow-lg shadow-pink-500/20"
+            className="w-64 h-64 md:w-[22rem] md:h-[22rem] rounded-full object-cover border-4 border-accent shadow-lg shadow-accent/20"
           />
         </div>
       </div>
