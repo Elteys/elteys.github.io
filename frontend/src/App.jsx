@@ -2,14 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaDiscord, FaBars, FaTimes } from 'react-icons/fa';
+import { FaGithub, FaFacebook, FaDiscord, FaBars, FaTimes } from 'react-icons/fa';
 import About from './components/about.jsx';
 import Skills from './components/skills.jsx';
 import Experience from './components/experience.jsx';
 import Education from './components/education.jsx';
 import Certificates from './components/certificates.jsx';
-import Projects from './components/Projects.jsx';
-import Footer from './components/Footer.jsx';
+import Projects from './components/projects.jsx';
+import Footer from './components/footer.jsx';
 import ScrollAnimationWrapper from './components/ScrollAnimationWrapper.jsx';
 
 function App() {
